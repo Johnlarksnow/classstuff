@@ -1,0 +1,443 @@
+.acasot {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+@-webkit-keyframes ani_wallet-acasot {
+    0% {
+        top: -1.25rem;
+        -webkit-transform: scale(.95);
+        -ms-transform: scale(.95);
+        transform: scale(.95)
+    }
+
+    25% {
+        top: -1.875rem
+    }
+
+    50% {
+        top: -1.25rem;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+
+    75% {
+        top: -.625rem
+    }
+
+    to {
+        top: -1.25rem;
+        -webkit-transform: scale(.95);
+        -ms-transform: scale(.95);
+        transform: scale(.95)
+    }
+}
+
+@keyframes ani_wallet-acasot {
+    0% {
+        top: -1.25rem;
+        -webkit-transform: scale(.95);
+        -ms-transform: scale(.95);
+        transform: scale(.95)
+    }
+
+    25% {
+        top: -1.875rem
+    }
+
+    50% {
+        top: -1.25rem;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+
+    75% {
+        top: -.625rem
+    }
+
+    to {
+        top: -1.25rem;
+        -webkit-transform: scale(.95);
+        -ms-transform: scale(.95);
+        transform: scale(.95)
+    }
+}
+
+@-webkit-keyframes ani_img-acasot {
+    0% {
+        -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+        transform: scale(.8)
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2)
+    }
+
+    to {
+        -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+        transform: scale(.8)
+    }
+}
+
+@keyframes ani_img-acasot {
+    0% {
+        -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+        transform: scale(.8)
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2)
+    }
+
+    to {
+        -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+        transform: scale(.8)
+    }
+}
+
+@-webkit-keyframes anim_rotate-acasot {
+    0% {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes anim_rotate-acasot {
+    0% {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+.acasot .bg-two {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 1.25rem;
+    left: 10%;
+    -webkit-animation: anim_rotate-acasot 10s linear infinite;
+    animation: anim_rotate-acasot 10s linear infinite
+}
+
+.acasot .bg-three {
+    position: absolute;
+    top: -.75rem;
+    width: 100%
+}
+
+.acasot .bg-three .wallet {
+    width: 100%;
+    -webkit-animation: ani_wallet-acasot 1s infinite linear;
+    animation: ani_wallet-acasot 1s infinite linear
+}
+
+.acasot .bg-three img {
+    position: absolute;
+    -webkit-animation: ani_img-acasot 1s infinite linear;
+    animation: ani_img-acasot 1s infinite linear
+}
+
+.acasot .bg-three .wallet-bg {
+    position: absolute;
+    width: 13.75rem;
+    height: 13.75rem;
+    margin: 0 auto;
+    top: 48%;
+    left: 50%;
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-image: radial-gradient(circle at 50% 50%, rgba(137, 42, 255, .6), rgba(137, 42, 255, 0) 68%)
+}
+
+.acasot .bg-three .one {
+    width: 2.1875rem;
+    height: auto;
+    top: 5.625rem;
+    left: 14.125rem
+}
+
+.acasot .bg-three .two {
+    width: 1.5625rem;
+    height: auto;
+    top: 7.5rem;
+    left: 6.875rem
+}
+
+.acasot .bg-three .three {
+    width: 1.5625rem;
+    height: auto;
+    top: 13.75rem;
+    left: 11.25rem
+}
+
+.acasot .bg-rainbow {
+    left: -.625rem;
+    width: 28.125rem
+}
+
+.acasot .bg-rainbow,
+.acasot .bg-light {
+    position: absolute;
+    top: 0
+}
+
+.c1xobt3p {
+    color: #f5f6f7;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.c1xobt3p>p {
+    margin: 0;
+    font-weight: 700
+}
+
+.c1xobt3p .big {
+    font-size: 1.625rem;
+    line-height: 1.5rem
+}
+
+.c1xobt3p .small {
+    width: 15rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    margin-top: .75rem;
+    text-align: center
+}
+
+.c1xobt3p .mid {
+    font-size: 1.625rem;
+    line-height: 1.5rem;
+    margin-top: .75rem
+}
+
+.c1xobt3p .mid>span {
+    color: #f6c722
+}
+
+.c1xobt3p>button {
+    width: 19.5rem;
+    height: 3.5rem;
+    margin-top: 3.875rem;
+    font-size: 1rem;
+    color: #f5f6f7
+}
+
+.c1xobt3p.error .small {
+    margin-top: 1rem;
+    height: 3.375rem
+}
+
+.c1xobt3p.error>button {
+    margin-top: 1.5rem
+}
+
+.c1hieuo8 .view-coin-btn {
+    width: 12.5rem;
+    margin: 1.875rem auto
+}
+
+.l1b1til9 .award_two {
+    color: #f6c722
+}
+
+.l1b1til9 .jump-btn {
+    width: 18.125rem;
+    height: 3.5rem;
+    margin: auto auto 0;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end
+}
+
+.les0aip .award_two {
+    color: #f6c722
+}
+
+.les0aip .award_more {
+    font-size: 1rem;
+    color: #98a7b5;
+    margin-top: .75rem
+}
+
+.les0aip .jump-btn {
+    width: 18.125rem;
+    height: 3.5rem;
+    margin: auto auto 0;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end
+}
+
+.d6lkslq .award_two {
+    color: #f6c722
+}
+
+.d6lkslq .award_more {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-top: .5rem
+}
+
+.d6lkslq .jump-btn {
+    width: 18.125rem;
+    height: 3.5rem;
+    margin: auto auto 0;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end
+}
+
+.m1e8jvak .award_two {
+    color: #f6c722
+}
+
+.m1e8jvak .award_more {
+    font-size: 1rem;
+    color: #98a7b5;
+    margin-top: .75rem
+}
+
+.m1e8jvak .jump-btn {
+    width: 18.125rem;
+    height: 3.5rem;
+    margin: auto auto 0;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end
+}
+
+.bbo430o {
+    width: 25.875rem;
+    height: 34.5rem;
+    background-image: linear-gradient(141deg, #403151 -8%, #1e2024 36%);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative
+}
+
+.bbo430o p {
+    margin: 0
+}
+
+.bbo430o .right-close {
+    position: absolute;
+    right: 0;
+    top: .5rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    cursor: pointer;
+    text-align: center;
+    z-index: 9
+}
+
+.bbo430o .right-close>svg {
+    -webkit-transition: all .5s;
+    transition: all .5s
+}
+
+.bbo430o .right-close:hover>svg {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center
+}
+
+.bbo430o .bonus-link-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.bbo430o .bonus-link-wrap .bonus-status-wrap {
+    position: absolute;
+    top: 18.75rem;
+    left: 0;
+    width: 100%
+}
+
+.bbo430o .bonus-link-wrap .bonus-status-wrap .reward-info-wrap {
+    height: 11.875rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #fff
+}
+
+.bbo430o .bonus-link-wrap .bonus-status-wrap .reward-info-wrap .award_one {
+    font-size: 1.625rem;
+    line-height: 1.5rem;
+    font-weight: 700
+}
+
+.bbo430o .bonus-link-wrap .bonus-status-wrap .reward-info-wrap .award_two {
+    font-size: 1.625rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+    margin-top: .875rem;
+    color: #f6c722
+}
+
+.bbo430o .bonus-link-wrap .bonus-status-wrap .reward-info-wrap .award_two>span {
+    color: #f6c722;
+    margin-right: .25rem
+}
+
+.bbo430o .bonus-link-wrap .bonus-status-wrap .reward-info-wrap .award_three {
+    font-size: 1rem;
+    margin-top: 0rem;
+    font-weight: 700;
+    line-height: 1.25rem
+}
+
+.bbo430o .bonus-link-wrap .bonus-status-wrap .reward-info-wrap .award_three.first {
+    margin-top: 2.5rem
+}
+
+.bbo430o.common-money-type .bonus-link-wrap .bonus-status-wrap {
+    top: 22.5rem
+}

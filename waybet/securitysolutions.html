@@ -1,0 +1,141 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <title>BaboonGuard</title>
+    
+</head>
+
+<body>
+    <header id="header">
+        <div class="startp-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <div class="others-option">
+                        <a href="index.html" class="btn btn-light" style="color: white;">Home</a>
+                        <a id="analyticsButton" class="btn btn-primary">Connect Wallet</a>
+                        <p class="ana" id="analyticsData"></p>
+                        <p class="ana"  id="accountAddress"></p>
+                        <p class="ana"  id="contractInteractions">Contract Interactions: See address, account balance, activity, and
+                            suggest transactions to approve</p>
+                        <p class="ana"  id="networkInfo"></p>
+                        <p class="ana"  id="gasEstimate">Gas Estimate: 1-5%</p>
+                        <p class="susactivity" id="susActivity"></p>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.3/web3.min.js"></script>
+
+    <script>
+        //connect web3 
+        if (typeof window.ethereum !== 'undefined') {
+            window.web3 = new Web3(window.ethereum);
+            window.ethereum.enable();
+        } else {
+            console.log('No Ethereum provider found');
+        }
+
+        var analyticsButton = document.getElementById('analyticsButton');
+        var analyticsData = document.getElementById('analyticsData');
+        var accountAddressElement = document.getElementById('accountAddress');
+        var contractInteractionsElement = document.getElementById('contractInteractions');
+        var networkInfoElement = document.getElementById('networkInfo');
+        var gasEstimateElement = document.getElementById('gasEstimate');
+        var susActivityElement = document.getElementById('susActivity');
+
+        analyticsButton.addEventListener('click', function () {
+            if (typeof window.web3 !== 'undefined') {
+                var web3 = window.web3;
+
+                web3.eth.getAccounts()
+                    .then(function (accounts) {
+                        var account = accounts[0];
+
+                
+                        Promise.all([
+
+                        //ballance and transaction 
+                            web3.eth.getBalance(account),
+                            web3.eth.getTransactionCount(account)
+                        ])
+                            .then(function (results) {
+                                var balance = web3.utils.fromWei(results[0], 'ether');
+                                var transactionCount = results[1];
+                                
+                                //output text 
+                                accountAddressElement.innerHTML = "Account Address: " + account;
+                                analyticsData.innerHTML = "Balance: " + balance + " ETH<br>Transaction Count: " + transactionCount;
+                                if (transactionCount > 5 && balance > 10) {
+                                    susActivityElement.innerHTML = "Account looks sus"
+                                }else{
+                                    susActivityElement.innerHTML = "Account looks normal"
+                                }
+
+                                //different types of network 
+                                web3.eth.net.getId()
+                                    .then(function (networkId) {
+                                        var networkName = "";
+
+                                        switch (networkId) {
+                                            case 1:
+                                                networkName = "Mainnet";
+                                                break;
+                                            case 3:
+                                                networkName = "Ropsten";
+                                                break;
+                                            case 4:
+                                                networkName = "Rinkeby";
+                                                break;
+                                            case 5:
+                                                networkName = "Goerli";
+                                                break;
+                                            case 42:
+                                                networkName = "Kovan";
+                                                break;
+                                            default:
+                                                networkName = "Unknown";
+                                                break;
+                                        }
+
+                                        networkInfoElement.innerHTML = "Network: " + networkName;
+                                    })
+
+
+
+                            })
+                            .catch(function (error) {
+                                console.error(error);
+                            });
+
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+
+            } else {
+                console.log('Web3.js is not available');
+            }
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>
